@@ -39,9 +39,10 @@ void linkedlist::push(int item)
 	top = temp;
 }
 
-//When top is null, the stack is empty
-//otherwise we create a new node and set that to top
-//We then set the address of the next node
+//store the old top value in 'temp'
+//make top link to the new top node
+//free the space for the old top node
+//return temp
 int linkedlist::pop()
 {
 	if (top == NULL)
