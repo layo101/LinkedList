@@ -20,11 +20,17 @@ private:
 	node * top;
 };
 
+//top is a pointer to a node
+//when top is null
+//stack is empty
 linkedlist::linkedlist()
 {
 	top = NULL;
 }
 
+//first thing we are doing is creating a node
+//In the next field we are setting the data in this node. We are dereferencing temp to do so
+//Then we are setting the "next" part of this newly created node as existing top
 void linkedlist::push(int item)
 {
 	node *temp = new node;
@@ -33,6 +39,9 @@ void linkedlist::push(int item)
 	top = temp;
 }
 
+//When top is null, the stack is empty
+//otherwise we create a new node and set that to top
+//We then set the address of the next node
 int linkedlist::pop()
 {
 	if (top == NULL)
@@ -49,6 +58,9 @@ int linkedlist::pop()
 	}
 }
 
+//We are looking at the first node
+//if the top is null, the stack is empty
+//otherwise we return the top value in our stack
 int linkedlist::see()
 {
 	if (top == NULL)
@@ -62,6 +74,7 @@ int linkedlist::see()
 	}
 }
 
+//if the stack is not empty return true
 bool linkedlist::empty()
 {
 	return top == NULL;
@@ -69,6 +82,7 @@ bool linkedlist::empty()
 
 int main()
 {
+	//  Test Program for Linked list stack implementation
 	cout << "\n\nLinked List stack implementation - START\n\n";
 	linkedlist s1;
 
